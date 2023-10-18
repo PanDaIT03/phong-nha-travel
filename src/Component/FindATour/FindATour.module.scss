@@ -1,0 +1,35 @@
+.wrapper {
+    padding-top: 2rem;
+    
+    .find-a-tour__sub-title {
+        font-size: 1.8rem;
+        font-family: 'Kaushan Script';
+        text-align: center;
+    }
+
+    .find-a-tour__title-primary {
+        font-size: 3.6rem;
+        text-transform: uppercase;
+        text-align: center;
+        padding: 2rem 0;
+        margin-bottom: 1.4rem;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            height: .5rem;
+            width: 5rem;
+            background: #47a0ff;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+        }
+    }
+
+    .find-a-tour__slide {
+        padding-top: 1.5rem;
+        width: 100%;
+        margin: 0 auto;
+    }
+}

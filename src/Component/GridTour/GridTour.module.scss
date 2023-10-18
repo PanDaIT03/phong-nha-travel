@@ -1,0 +1,79 @@
+.wrapper {
+    margin: 0 auto;
+    width: 114rem;
+    margin-top: 10rem;
+}
+
+.title-block {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .title-block__title {
+        text-transform: uppercase;
+        font-size: 3.6rem;
+        margin-bottom: 2rem;
+    }
+
+    .title-block__description {
+        color: #999;
+        font-size: 1.8rem;
+        margin-bottom: 4rem;
+        padding-left: 2rem;
+        position: relative;
+    }
+
+    .title-block__description::after {
+        content: "";
+        height: .5rem;
+        width: .5rem;
+        height: 2.5rem;
+        background: var(--primary);
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+    }
+}
+
+.grid-layout {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 114rem;
+    margin: 2rem auto 0 auto;
+}
+
+.primary {
+    margin-top: 2rem;
+    
+    .title-block {
+        display: block;
+        text-align: center;
+    }
+
+    .title-block__title {
+        font-size: 1.8rem;
+        margin-bottom: 1rem;
+        font-family: 'Kaushan Script';
+        text-transform: none;
+    }
+
+    .title-block__description {
+        font-size: 3.6rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: var(--text-color);
+        padding: 0;
+
+        &::after {
+            width: 5rem;
+            height: .5rem;
+            top: 100%;
+            left: 50%;
+            transform: translate(-50%, 50%);
+        }
+    }
+}

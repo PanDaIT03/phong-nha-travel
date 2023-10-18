@@ -1,0 +1,94 @@
+%button-general {
+    color: white;
+    background-color: rgba(71, 160, 255, 0.8);
+    border-radius: .3rem !important;
+    font-weight: normal !important;
+}
+
+.wrapper {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.3rem;
+    min-width: 10rem;
+    text-transform: uppercase;
+    border-radius: 5rem;
+    padding: 1rem 1rem;
+    cursor: pointer;
+    user-select: none;
+
+    &.disabled {
+        opacity: .5;
+        pointer-events: none;
+    }
+
+    +.wrapper {
+        margin-left: .8rem;
+    }
+}
+
+button {
+    height: 4.2rem;
+    line-height: 4.2rem;
+    background-color: transparent;
+}
+
+.icon+.title,
+.title+.icon {
+    margin-left: .8rem;
+}
+
+.title,
+.icon {
+    color: white;
+}
+
+// Button types
+.primary {
+    background-color: rgba(71, 160, 255, 0.8);
+    width: 18.1rem;
+
+    &:hover {
+        background-color: var(--primary);
+    }
+}
+
+.apply,
+.checkout,
+.update,
+.find {
+    @extend %button-general;
+
+    &:hover {
+        background-color: var(--primary);
+    }
+}
+
+.update {
+    background-color: rgb(241 84 160 / 80%);
+    margin-left: 1rem;
+
+    &:hover {
+        background-color: rgba(255, 71, 160, 0.8);
+    }
+}
+
+.checkout {
+    width: 100%;
+    margin: 1rem 0 0;
+}
+
+.find {
+    width: 100%;
+    background-color: #006fe6;
+
+    &:hover {
+        background-color: #006fe6;
+    }
+}
+
+// Button sizes
+.small {
+    width: 12rem;
+}

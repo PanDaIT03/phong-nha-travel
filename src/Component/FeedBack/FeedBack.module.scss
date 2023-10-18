@@ -1,0 +1,32 @@
+.wrapper {
+    width: 50%;
+    padding: 0 1.5rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-bottom: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+
+    &::after {
+        height: .5rem;
+        width: 5rem;
+        content: "";
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, 50%);
+        background: #47a0ff;
+    }
+}
+
+.content {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}

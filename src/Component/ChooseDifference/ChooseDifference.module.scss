@@ -1,0 +1,123 @@
+.wrapper {
+    background-color: var(--color-white);
+    width: 100%;
+}
+
+.wrapper__content {
+    width: 114rem;
+    margin: 0 auto;
+    padding: 5rem 0;
+    display: flex;
+
+    .content__left {
+        width: 75%;
+    }
+
+    .content__right {
+        margin: auto 0;
+        width: 25%;
+    }
+}
+
+.title {
+    .title__subtitle {
+        font-size: 1.8rem;
+        font-family: 'Kaushan Script';
+        margin-bottom: 1rem;
+    }
+
+    .title__primary {
+        font-size: 3rem;
+        color: var(--text-color);
+        text-transform: uppercase;
+    }
+}
+
+.choose-items {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    
+    .item {
+        display: flex;
+        flex-basis: 30%;
+    }
+}
+
+
+.icon {
+    height: 6.6rem;
+    width: 26%;
+    background: #47a0ff;
+    color: #fff;
+    border-radius: 100%;
+    margin-right: 1rem;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 5.6rem;
+        height: 5.6rem;
+        border-radius: 100%;
+        display: block;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: .2rem dotted rgba(255, 255, 255, 0.5);
+    }
+
+    .icon__item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-font-smoothing: antialiased;
+    }
+
+    .globe::after {
+        font-size: 3rem;
+        content: "\e12f";
+        font-family: "adventure-tours";
+    }
+
+    .cash::before {
+        font-size: 3rem;
+        content: "\e12e";
+        font-family: "adventure-tours";
+    }
+
+    .photograph::before {
+        font-size: 3rem;
+        content: "\e12b";
+        font-family: "adventure-tours";
+    }
+
+    .calendar::before {
+        font-size: 3rem;
+        content: "\e129";
+        font-family: "adventure-tours";
+    }
+
+    .support::before {
+        font-size: 3rem;
+        content: "\e12d";
+        font-family: "adventure-tours";
+    }
+
+    .love::before {
+        font-size: 3rem;
+        content: "M";
+        font-family: "adventure-tours";
+    }
+
+}
+
+.icon__field {
+    width: 67%;
+
+    .icon__field-description {
+        color: #9a9a9a;
+    }
+}

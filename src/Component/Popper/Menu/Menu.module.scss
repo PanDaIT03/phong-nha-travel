@@ -1,0 +1,137 @@
+.list-menu {
+    .menu-items {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.menu-item {
+    font: normal 700 1.5rem/10rem Oxygen;
+    padding: 0 .5rem;
+    cursor: pointer;
+    position: relative;
+
+    a {
+        opacity: .8;
+        color: #04073f;
+        text-transform: uppercase;
+        transition: all .1s linear;
+    }
+
+    &:hover>a {
+        color: var(--primary);
+    }
+
+    &:last-child>ul {
+        transform: translateX(-15%);
+    }
+
+}
+
+.menu-poper {
+    background-color: #fff;
+    width: max-content;
+    border-radius: .3rem;
+    margin-top: 1rem;
+    opacity: 0;
+    top: 140%;
+    position: absolute;
+    transition: all .3s;
+    pointer-events: none;
+    //box shadow
+    box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.22);
+
+    li {
+        padding: 1.5rem 1rem;
+        line-height: 2rem;
+        border-bottom: .1rem solid #dcdcdc;
+
+        &:last-child {
+            border: none;
+        }
+    }
+
+    &::before {
+        content: "";
+        height: 1rem;
+        width: 100%;
+        left: 50%;
+        top: -1rem;
+        transform: translateX(-50%);
+        position: absolute;
+    }
+
+    .item:hover>a {
+        color: var(--primary);
+    }
+
+    &.active {
+        display: block;
+    }
+}
+
+.active {
+    .menu-poper {
+        pointer-events: all;
+        top: 100%;
+        opacity: 1;
+    }
+
+    &::before {
+        color: var(--primary);
+        transform: rotate(180deg);
+    }
+}
+
+.has-children::before {
+    content: "\e904";
+    font-family: "icomoon";
+    font-size: 1.3rem;
+    float: right;
+    margin-left: .4rem;
+    transition: all .3s ease;
+}
+
+.cart>a::before {
+    content: "n";
+    font-family: "adventure-tours";
+    text-transform: none;
+}
+
+.menu-category {
+    .menu-items {
+        display: block;
+    }
+
+    .menu-item {
+        font: normal 400 1.4rem/3rem Oxygen;
+        padding: 0 2rem;
+        cursor: pointer;
+        position: relative;
+    }
+
+    a {
+        text-transform: capitalize;
+        color: var(--text-color);
+        opacity: 1;
+    }
+}
+
+.selected {
+    background-color: rgba(71, 160, 255, 0.8);
+    transition: all .2s linear;
+
+    a {
+        color: #fff;
+    }
+}
+
+.selected:hover {
+    background-color: #fff;
+
+    a {
+        color: var(--primary);
+    }
+}

@@ -1,0 +1,183 @@
+.wrapper {
+    width: 100%;
+    border-radius: .3rem;
+    background: #47a0ff;
+    padding: 3.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .title {
+        font-size: 2.2rem;
+        font-weight: normal;
+        color: #fff;
+        font-family: 'Kaushan Script';
+        text-transform: capitalize;
+        margin-bottom: 2rem;
+    }
+}
+
+%form-input {
+    width: 100%;
+    color: var(--text-color);
+    padding: 1.2rem 4rem 1.2rem 1.5rem;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: .3rem;
+}
+
+.form-block__item {
+    width: 20.5rem;
+    position: relative;
+    margin-bottom: 1rem;
+
+    input {
+        @extend %form-input;
+    }
+
+    .icon {
+        position: absolute;
+        top: 50%;
+        right: 10%;
+        transform: translate(50%, -50%);
+        color: rgba(71, 160, 255, 0.5);
+    }
+
+    .search::before {
+        content: "4";
+        font-family: "adventure-tours";
+        font-style: normal;
+    }
+}
+
+.button {
+    position: inherit;
+}
+
+.form-block__item__field-pair {
+    display: flex;
+    justify-content: space-between;
+}
+
+.start,
+.end {
+    width: 10rem;
+    position: relative;
+
+    input[type="date"] {
+        padding: 1.2rem .5rem;
+
+        &::-webkit-calendar-picker-indicator {
+            z-index: 1;
+            cursor: pointer;
+            background: none;
+            color: transparent;
+            position: absolute;
+            width: 100%;
+        }
+    }
+}
+
+.field {
+    @extend %form-input;
+    padding: 1.2rem 1.5rem;
+}
+
+.slider {
+    height: 0.5rem;
+    background-color: #eee;
+    border-radius: .5rem;
+    position: relative;
+    border: .1rem solid #ddd;
+
+    .progress {
+        height: 100%;
+        background-color: #ff47a0;
+        border-radius: .5rem;
+        position: absolute;
+    }
+}
+
+.price-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+    .from,
+    .to {
+        padding: .5rem 1rem 0 1rem;
+    }
+}
+
+.range-input {
+    input {
+        padding: 0;
+        position: absolute;
+        height: .5rem;
+        width: 100%;
+        background: none;
+        pointer-events: none;
+        appearance: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+        height: 1.7rem;
+        width: 1.7rem;
+        border-radius: 50%;
+        pointer-events: auto;
+        -webkit-appearance: none;
+        background-color: #ff47a0;
+    }
+
+    input[type="range"]::-moz-range-thumb {
+        height: 1.7rem;
+        width: 1.7rem;
+        border: none;
+        border-radius: 50%;
+        pointer-events: auto;
+        -moz-appearance: none;
+        background-color: #ff47a0;
+    }
+}
+
+.dropdown-toggle {
+    cursor: pointer;
+    color: #888c90;
+    font: normal 400 1.4rem Oxygen;
+    text-align: left;
+    @extend %form-input;
+
+    .category::before {
+        content: "Q";
+        font-family: "adventure-tours";
+        font-style: normal;
+    }
+}
+
+.menu {
+    display: none;
+    width: max-content;
+    background-color: white;
+    border-radius: .3rem;
+    padding: 1rem 0;
+    left: 0;
+    top: 110%;
+    position: absolute;
+    //box-shadow
+    box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.22);
+    -webkit-box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.22);
+    -moz-box-shadow: 0px 10px 14px 0px rgba(0, 0, 0, 0.22);
+}
+
+.active {
+    display: block;
+}
+
+.has-content {
+    width: 100%;
+    overflow: hidden;
+    color: #333;
+    display: inline-block;
+    height: 1.7rem;
+}

@@ -1,0 +1,142 @@
+@import 'normalize.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500&display=swap');
+
+:root {
+    --color-white: #fff;
+    --color-black: #000;
+    --color-belize-hole: #2980b9;
+    --color-cloud: #ecf0f1;
+    --color-anti-flash-white: #f1f2f6;
+    --color-speace: #a4b0be;
+    --color-better-river: #3498db;
+    --color-sun-flower: #f1c40f;
+    --color-silver: #bdc3c7;
+    --color-spray: #82ccdd;
+    --color-pomegrante: #c0392b;
+    --color-watermelon: #ff4757;
+    --color-livid: #6a89cc;
+    --color-concrete: #95a5a6;
+    --color-lightblueballerina: #c8d6e5;
+    --color-clearchill: #1B9CFC;
+
+    --primary: #47a0ff;
+    --bgColor: #f6f6f6;
+    --text-color: #333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    color: var(--text-color);
+    font: normal 400 1.5rem/1.8em Oxygen;
+    line-height: 1.5;
+    text-rendering: optimizeSpeed;
+    background-color: var(--bgColor);
+}
+
+// Fonts
+@font-face {
+    font-family: "adventure-tours";
+    src: url("../../asset/fonts/adventure-tours.woff");
+}
+
+@font-face {
+    font-family: "Kaushan Script";
+    src: url("../../asset/fonts/vm8vdRfvXFLG3OLnsO15WYS5DG74wNJVMJ8b.woff2");
+}
+
+@font-face {
+    font-family: "Oxygen";
+    src: url("../../asset/fonts/2sDcZG1Wl4LcnbuCNWgzZmW5Kb8VZBHR.woff2");
+}
+
+@font-face {
+    font-family: "WooCommerce";
+    src: url("../../asset/fonts/WooCommerce.woff");
+}
+
+@font-face {
+    font-family: "icomoon";
+    src: url("../../asset/fonts/icomoon.ttf");
+}
+
+.container {
+    padding-top: 10.2rem;
+}
+
+.line-through {
+    text-decoration: line-through !important;
+}
+
+.--flexbox {
+    display: flex;
+}
+
+.flexbox--center {
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-spaceBetween {
+    justify-content: space-between;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.--border-bottom {
+    border-bottom: .1rem solid #e9e9e9;
+}
+
+.--cursor-pointer {
+    cursor: pointer;
+}
+
+.--overflow-hidden {
+    overflow: hidden;
+}
+
+.font-size--form {
+    font-size: 1.3rem;
+}
+
+.--atlist-align {
+    margin-top: 2rem;
+    box-shadow: 10px 10px 5px -4px rgba(0, 0, 0, 0.25);
+    -webkit-box-shadow: 10px 10px 5px -4px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 10px 10px 5px -4px rgba(0, 0, 0, 0.25);
+}
+
+.mLeft30px {
+    margin-left: 3rem;
+}
+
+.padding-all {
+    padding-top: 40px;
+    padding-right: 50px;
+    padding-bottom: 40px;
+    padding-left: 50px;
+}
+
+button,
+input {
+    border: none;
+    outline: none;
+}
+
+a[href] {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}

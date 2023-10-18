@@ -1,0 +1,22 @@
+.wrapper {
+    width: max-content;
+}
+
+.avatar {
+    width: 9.5rem;
+    height: 9.5rem;
+    margin-bottom: 2rem;
+    
+    img {
+        width: 100%;
+        border-radius: 100%;
+        border: .6rem solid #fff;
+        box-shadow: 0 .2rem .3rem rgba(0, 0, 0, 0.09);
+    }
+}
+
+.name {
+    font-size: 1.5rem;
+    text-transform: capitalize;
+    font-family: 'Kaushan Script';
+}

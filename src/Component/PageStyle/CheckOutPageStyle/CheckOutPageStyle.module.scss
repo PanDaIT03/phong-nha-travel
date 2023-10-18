@@ -1,0 +1,289 @@
+.active {
+    height: 52rem !important;
+}
+
+.error-message {
+    font-size: 12px;
+    color: red;
+    font-style: oblique;
+}
+
+.hidden {
+    overflow: hidden;
+    overflow-y: auto;
+    height: 1rem;
+}
+
+%form-row {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+
+    label {
+        color: var(--color);
+    }
+
+    input {
+        padding: 1.2rem 1.5rem;
+        outline: none;
+        border: 1px solid #ebebeb;
+        background: #fbfbfb;
+        border-radius: .3rem;
+        color: var(--color);
+
+        &:focus {
+            border: 1px solid #4090e5;
+        }
+    }
+}
+
+%layout-standar {
+    width: 114rem;
+    background-color: var(--color-white);
+    margin: 5rem auto 0 auto;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.09);
+    border-radius: 3px;
+    padding: 4rem 5rem;
+}
+
+.coupon {
+    padding-top: 2rem;
+
+    .show-coupon-toggle {
+        @extend %layout-standar;
+        position: relative;
+
+        a {
+            color: var(--primary);
+            cursor: pointer;
+
+            &:hover {
+                border-bottom: 1px dotted #47a0ff;
+            }
+        }
+
+        &::before {
+            content: " ";
+            display: block;
+            width: .5rem !important;
+            height: 3rem !important;
+            background-color: #47a0ff;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    .checkbox-coupon {
+        @extend %layout-standar;
+        height: 0;
+        padding: 0 5rem;
+        overflow: hidden;
+        transition: all .3s linear;
+
+        input {
+            padding: 1rem 1.5rem;
+            width: 48rem;
+            outline: none;
+            color: #333;
+            border: 1px solid #ebebeb;
+            border-radius: .3rem;
+        }
+
+        button {
+            padding: 1rem 1.5rem;
+            color: var(--color-white);
+            border-radius: .3rem;
+            background-color: var(--primary);
+            border: none;
+            margin-left: 4rem;
+            cursor: pointer
+        }
+    }
+}
+
+.checkout-box {
+    @extend %layout-standar;
+
+    .checkout-box__left {
+        width: 45%;
+
+        .title {
+            font-size: 1.7rem;
+            color: var(--color);
+        }
+
+        .form-row {
+            @extend %form-row
+        }
+    }
+
+    .checkout-box__right {
+        width: 45%;
+
+        .ship-to-another {
+            transition: all .3s linear;
+        }
+
+        .ship-to-difference {
+            .ship-to-difference__checkbox {
+                margin-right: 1rem;
+            }
+
+            label {
+                h3 {
+                    font-size: 1.7rem;
+                    color: var(--color);
+                    user-select: none
+                }
+            }
+        }
+
+        .form-row {
+            @extend %form-row;
+
+            .note {
+                padding: 1.2rem 1.5rem;
+                outline: none;
+                border: .1rem solid #ebebeb;
+                background: #fbfbfb;
+                border-radius: .3rem;
+                color: var(--color);
+                height: 20rem;
+
+                &:focus {
+                    border: .1rem solid #4090e5;
+                }
+            }
+        }
+    }
+}
+
+.product-box {
+    @extend %layout-standar;
+    color: var(--color);
+    text-align: left;
+
+    table {
+        margin-top: 5rem;
+        border-collapse: collapse;
+        width: 100%;
+        font-size: 1.4rem;
+
+        tr {
+            cursor: pointer;
+
+            &:hover {
+                background-color: #ddd;
+            }
+        }
+
+        th,
+        td {
+            font-weight: bold;
+            padding: 1rem 3rem;
+            text-transform: uppercase;
+            border-bottom: .1rem solid #e4e4e4;
+        }
+
+        .product {
+            font-size: 1.6rem;
+            line-height: 3.5rem;
+            font-weight: normal;
+            font-family: "Oxygen";
+
+            .product-quantity {
+                text-transform: none;
+            }
+
+            p {
+                text-transform: capitalize;
+            }
+        }
+
+        .ship {
+            td {
+                text-transform: none;
+            }
+        }
+    }
+}
+
+.payment {
+    background: #ebe9eb;
+    border-radius: 0.5rem 0.5rem 0 0;
+    margin-top: 4rem;
+
+    .payment__methods {
+        padding: 1rem;
+        border-bottom: .1rem solid #d3ced2;
+
+        .payment__methods__bacs {
+            margin-bottom: 2rem;
+        }
+
+        li {
+            list-style: none;
+
+            input {
+                margin-right: 1rem;
+            }
+
+            .payment-box-bacs,
+            .payment-box-cod {
+                background-color: #dfdcde;
+                margin-top: 1rem;
+                position: relative;
+                overflow: hidden;
+                height: 0;
+                transition: all .2s linear;
+
+                p {
+                    color: #515151;
+                    font-size: 1.2rem;
+                }
+
+                &::before {
+                    content: "";
+                    display: block;
+                    border: 1em solid #dfdcde;
+                    border-right-color: transparent;
+                    border-left-color: transparent;
+                    border-top-color: transparent;
+                    position: absolute;
+                    top: -0.75em;
+                    left: 0;
+                    margin: -1em 0 0 2em;
+                }
+            }
+        }
+    }
+}
+
+.place-order {
+    background: #ebe9eb;
+    border-radius: 0.5rem 0.5rem 0 0;
+    padding: 1rem;
+}
+
+.btn-order {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: flex-end;
+    opacity: .8;
+    
+    &:hover {
+        opacity: 1;
+    }
+    
+    button {
+        text-transform: uppercase;
+        color: var(--color-white);
+        background-color: var(--primary);
+        border: none;
+        border-radius: .3rem;
+        padding: 1rem 2rem;
+        cursor: pointer;
+    }
+}

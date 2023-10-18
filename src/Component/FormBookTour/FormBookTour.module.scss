@@ -1,0 +1,161 @@
+%icon {
+    top: 50%;
+    right: 1rem;
+    position: absolute;
+    transform: translate(0, -50%);
+    color: rgba(71, 160, 255, 0.5);
+}
+
+%icon-before {
+    font-family: "adventure-tours";
+    font-size: 1.5rem;
+    font-style: normal;
+}
+
+.error {
+    position: absolute;
+    top: -2rem;
+    z-index: 1;
+
+    .error-message {
+        width: 20rem;
+        color: #fff;
+        font-size: 1.3rem;
+        position: relative;
+        border-radius: 3rem;
+        background: #eb7591;
+        font-family: "Oxygen";
+        padding: .3rem 1.5rem;
+
+        .arrow {
+            bottom: -.5rem;
+            position: absolute;
+            transform: rotate(135deg);
+            border-top: 1rem solid #eb7591;
+            border-left: 1rem solid #eb7591;
+        }
+    }
+}
+
+.icons-set__item-right {
+    width: 100%;
+    border-radius: .3rem;
+    background: #47a0ff;
+    padding: 3.5rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .form-block {
+        width: 100%;
+        position: relative;
+
+        &__title {
+            color: #fff;
+            font-size: 2.3rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-family: 'Kaushan Script';
+        }
+
+        &__item {
+            position: relative;
+            margin-bottom: 1rem;
+
+            input {
+                border: none;
+                color: #333;
+                outline: none;
+                position: relative;
+                border-radius: .3rem;
+                padding: 1.2rem 4rem 1.2rem 1.5rem;
+                background-color: rgba(255, 255, 255, 0.9);
+            }
+
+            .td-user {
+                @extend %icon;
+
+                &::before {
+                    content: "\e024";
+                    @extend %icon-before;
+                }
+            }
+
+            .td-email {
+                @extend %icon;
+
+                &::before {
+                    content: "\e0fb";
+                    @extend %icon-before;
+                }
+            }
+
+            .td-phone {
+                @extend %icon;
+
+                &::before {
+                    content: "\e132";
+                    @extend %icon-before;
+                }
+            }
+
+            input[type="date"] {
+                width: 20rem;
+                padding-right: 1.5rem;
+
+                &::before {
+                    @extend %icon;
+                    content: "\e012";
+                    @extend %icon-before;
+                }
+
+                &::-webkit-calendar-picker-indicator {
+                    z-index: 1;
+                    cursor: pointer;
+                    background: none;
+                    color: transparent;
+                }
+            }
+
+            input[type="number"] {
+                width: 20rem;
+            }
+
+            .td-quantity {
+                @extend %icon;
+
+                &::before {
+                    content: "\e07f";
+                    @extend %icon-before;
+                }
+            }
+        }
+
+        &__price-details {
+            color: #fff;
+            font-weight: 400;
+            font-size: 1.5rem;
+            text-align: center;
+            font-family: "Oxygen";
+        }
+
+        &__button {
+            left: 50%;
+            text-align: center;
+            position: absolute;
+            transform: translate(-50%, 10px);
+
+            input {
+                height: 5rem;
+                color: #fff;
+                padding: 0 3.5rem;
+                line-height: 5rem;
+                border-radius: .5rem;
+                background: #ff47a0;
+                text-transform: uppercase;
+                border: .2rem solid #f6f6f6;
+            }
+        }
+    }
+}

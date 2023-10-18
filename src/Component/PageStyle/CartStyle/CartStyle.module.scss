@@ -1,0 +1,229 @@
+.active {
+    background: #ddd !important;
+
+    .btn-decreament,
+    .btn-increament {
+        background: #ddd !important;
+    }
+}
+
+.complete {
+    background-color: #73eb55;
+}
+
+.fail {
+    background-color: #e04065;
+}
+
+.button-complete {
+    opacity: .5;
+}
+
+%product_box {
+    color: #333;
+    background: #fff;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.09);
+    border-radius: 3px;
+}
+
+%table {
+    border-collapse: collapse;
+    width: 100%;
+    font-size: 1.4rem;
+}
+
+%button {
+    padding: 1rem 1.5rem;
+    background-color: #47a0ff;
+    text-transform: uppercase;
+    border: none;
+    color: white;
+    border-radius: .3rem;
+    cursor: pointer;
+    opacity: .9;
+}
+
+.product-box {
+    width: 136.4rem;
+    margin: 5rem auto;
+    @extend %product_box;
+
+    table {
+        @extend %table;
+
+        tr {
+            border: .1rem solid #e4e4e4;
+        }
+
+        td {
+            padding: 1rem 3rem;
+        }
+
+        .title {
+            th {
+                padding: 1rem 3rem;
+                text-transform: uppercase;
+            }
+
+            th:nth-child(2) {
+                padding: 0;
+                width: 5rem;
+            }
+
+            .product-name {
+                width: 46rem;
+            }
+        }
+
+        .product-item {
+            .remove {
+                .cover {
+                    border-radius: 5rem;
+                    width: 3rem;
+                    height: 3rem;
+                    margin: 0 auto;
+                    transition: all .1s linear;
+
+                    .remove-icon {
+                        z-index: 1;
+                        color: #eb7591;
+                    }
+                }
+
+                &:hover>.cover {
+                    background-color: #eb7591;
+                }
+
+                &:hover>.cover>.remove-icon {
+                    color: white;
+                }
+            }
+
+            .image {
+                width: 5.2rem;
+                height: 8.1rem;
+                padding: 0;
+
+                img {
+                    width: 100%;
+                }
+            }
+
+            .product-name {
+                span {
+                    color: #4090e5;
+                    font-size: 1.5rem;
+                    transition: all 0.2s ease-in-out;
+
+                    &:hover {
+                        border-bottom: .1rem dashed;
+                    }
+                }
+            }
+
+            .product-quantity {
+                text-align: center;
+
+                input {
+                    border: none;
+                    background-color: white;
+                    cursor: pointer;
+                    color: #333;
+                    font-size: 1.7rem;
+                }
+
+                .quantity {
+                    margin: 0 1rem;
+                }
+            }
+
+            .payment-status {
+                .payment-decorate {
+                    width: 3rem;
+                    height: 3rem;
+                    display: flex;
+                    margin: 0 auto;
+                    color: white;
+                    border-radius: 5rem;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+
+            .product-coupon {
+                text-align: center;
+            }
+        }
+
+        .counpon {
+            input {
+                padding: 1rem 1.5rem;
+                border: 1px solid #d3ced2;
+                color: #333;
+                border-radius: .3rem;
+                outline: none;
+            }
+        }
+
+        .update-cart {
+            float: right;
+        }
+    }
+}
+
+.cart-collaterals {
+    width: 122.4rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-end;
+    color: #333;
+
+    .cart-totals {
+        width: 55rem;
+
+        .title {
+            h2 {
+                font-weight: 400;
+            }
+        }
+
+        .content {
+            @extend %product_box;
+
+            table {
+                @extend %table;
+                padding: 1rem 3rem;
+
+                tr {
+                    border: .1rem solid #e4e4e4;
+
+                    th {
+                        width: 15.5rem;
+                        text-transform: uppercase;
+                        text-align: left;
+                    }
+
+                    td {
+                        width: 29rem;
+                    }
+
+                    th,
+                    td {
+                        padding: 1rem 2rem;
+                    }
+                }
+
+                .cart-delivery {
+                    td {
+                        .shipping-method::after {
+                            content: "\e019";
+                            color: #4090e5;
+                            margin-left: 1rem;
+                            font-family: "WooCommerce";
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

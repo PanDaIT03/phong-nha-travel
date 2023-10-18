@@ -1,0 +1,26 @@
+.card-item {
+    width: 26.2rem;
+    height: 17.5rem;
+
+    img {
+        position: relative;
+        width: 100%;
+    }
+
+    .title {
+        color: #fff;
+        width: max-content;
+        font-size: 1.9rem;
+        font-weight: 500;
+        text-transform: capitalize;
+        position: absolute;
+        left: 50%;
+        bottom: 10%;
+        transform: translateX(-50%);
+        transition: all .5s;
+    }
+
+    &:hover {
+        opacity: .8;
+    }
+}

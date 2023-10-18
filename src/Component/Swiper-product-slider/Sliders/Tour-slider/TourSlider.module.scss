@@ -1,0 +1,33 @@
+.f-23r {
+    font-size: 2.3rem;
+}
+
+.tour-images-slider {
+    width: 114rem;
+
+    .swiper-nav-btns {
+        button {
+            border: none;
+            color: #cdcdcd;
+            padding: 0 .5rem;
+            cursor: pointer;
+            top: 50%;
+            position: absolute;
+            background-color: transparent;
+            transform: translateY(-50%);
+            z-index: 11;
+            
+            &:hover {
+                opacity: .5;
+            }
+        }
+
+        .swiper-btn-prev {
+            left: .2rem;
+        }
+
+        .swiper-btn-next {
+            right: .2rem;
+        }
+    }
+}

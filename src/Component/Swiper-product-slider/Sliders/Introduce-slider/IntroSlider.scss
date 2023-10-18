@@ -1,0 +1,63 @@
+.tour-images-slider {
+    width: 142.5rem;
+    height: 60rem;
+    position: relative;
+
+    .swiper-button-prev::after {
+        font-family: "FontAweSome";
+        content: "\f053";
+        color: rgba(255, 255, 255);
+        font-weight: 400;
+    }
+
+    .swiper-button-next::after {
+        font-family: "FontAweSome";
+        content: "\f054";
+        color: rgba(255, 255, 255);
+        font-weight: 400;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        top: 50%;
+        transform: translateY(50%);
+
+        &:hover {
+            opacity: .7;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: 60rem;
+    }
+}
+
+.tour-images-slider-thumbs {
+    height: 6rem;
+    position: relative;
+    overflow: visible;
+
+    .swiper-wrapper {
+        position: absolute;
+        top: -105%;
+                
+        .swiper-slide {
+            &-thumb-active {
+                border: .3rem solid #47a0ff;
+            }
+        }
+
+        .tour-images-slider-thumbs-wrapper {
+            width: 100%;
+            height: 100%;
+            cursor: pointer;
+    
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+    
+}

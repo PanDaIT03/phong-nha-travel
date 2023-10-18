@@ -1,0 +1,175 @@
+.review {
+    height: 40rem;
+    position: relative;
+
+    .review__illustration {
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -3;
+    }
+
+    .review__title {
+        top: 25%;
+        right: 50%;
+        position: absolute;
+        text-transform: uppercase;
+        transform: translate(50%, 25%);
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+    }
+}
+
+.layout-container {
+    width: 134rem;
+    margin: -13rem auto 0 auto;
+    padding: 1rem 2rem;
+    position: relative;
+    z-index: 1;
+    color: #333;
+
+    .layout-container__left {
+        width: 80%;
+        background-color: white;
+        border-radius: 1.5rem;
+        border-top: .4rem solid #47a0ff;
+        font-weight: 400;
+
+        .info-tour {
+            padding: 4rem 5rem 0 5rem;
+
+            a {
+                font-weight: 600;
+                color: var(--primary);
+                text-decoration: none;
+                text-transform: uppercase;
+                font: normal 400 15px/1.8em Oxygen;
+
+                &:hover {
+                    border-bottom: .1rem dashed #4090e5
+                }
+            }
+
+            .table-info-tour {
+                margin-top: 5rem;
+
+                table {
+                    border-collapse: collapse;
+                }
+
+                tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+
+                td {
+                    padding: 8px;
+                    width: 40rem;
+                    border: 1px solid #ddd;
+                }
+
+                tr {
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #ddd;
+                    }
+                }
+
+                span {
+                    color: #ff6600;
+                    font-size: 2rem;
+                }
+            }
+
+            .included {
+                margin-top: 3rem;
+            }
+
+            .tour__list {
+                padding-left: 4rem;
+                line-height: 2.5rem;
+            }
+        }
+    }
+
+    .share-button {
+        margin-top: 3rem;
+        border-radius: 0 0 1.5rem 1.5rem;
+
+        .share-button__items {
+            width: 25%;
+            height: 6rem;
+            text-align: center;
+            border: 1px solid #ebebeb;
+            color: #d2d2d2;
+            transition: all .2s ease;
+        }
+
+        .facebook:hover {
+            color: #183153;
+        }
+
+        .twitter:hover {
+            color: #1DA1F2;
+        }
+
+        .instagram:hover {
+            color: #1DA1F2;
+        }
+
+        .pinterest:hover {
+            color: #bd081c;
+        }
+    }
+
+    .layout-container__right {
+        width: 22%;
+        padding: 1rem 2rem;
+
+        .decoration-price {
+            height: 10rem;
+            margin-bottom: 2rem;
+
+            .decoration-price__value {
+                height: 60%;
+                font-weight: 600;
+                font-size: 2.3rem;
+                border-radius: .3rem .3rem 0 0;
+                background-color: var(--primary);
+
+                p {
+                    margin-left: 1rem;
+                    color: var(--color-white);
+                }
+
+                .td-price-tag:before {
+                    color: #fff;
+                    content: "\e128";
+                    font: normal 400 2rem/4rem adventure-tours;
+                    animation: tag 1s infinite linear;
+
+                    @keyframes tag {
+                        50% {
+                            font-size: 2.2rem;
+                        }
+                    }
+                }
+            }
+
+            .decoration-price__label {
+                height: 40%;
+                color: #04073f;
+                text-align: center;
+                border-radius: 0 0 .3rem .3rem;
+                background: rgba(255,255,255,0.9);
+                font: normal 400 1.5rem/4rem Oxygen;
+            }
+        }
+    }
+}

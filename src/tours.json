@@ -1,0 +1,23 @@
+[
+    {
+        "image": "images/canyon.jpeg",
+        "title": "TOUR QUẢNG BÌNH ĐÀ NẴNG CÙ LAO CHÀM HỘ AN 3 NGÀY 2 ĐÊM",
+        "description": "Trải nghiệm tour hành trình di sản Miền Trung cùng chúng tôi",
+        "price": "2.980.000đ",
+        "id": 1
+    },
+    {
+        "image": "~/asset/images/HaNoiQuangBinh.jpg",
+        "title": "TOUR QUẢNG BÌNH ĐÀ NẴNG CÙ LAO CHÀM HỘ AN 3 NGÀY 2 ĐÊM",
+        "description": "Trải nghiệm những khoảnh khắc đáng nhớ cùng chúng tôi",
+        "price": "1.230.000đ",
+        "id": 3
+    },
+    {
+        "image": "~/asset/images/PhongNhaKeBang.jpg",
+        "title": "TOUR GHÉP PHONG NHA HẰNG NGÀY",
+        "description": "khám phá thiên nhiên hoang sơ hùng vĩ",
+        "price": "1.980.000đ",
+        "id": "4"
+    }
+]
