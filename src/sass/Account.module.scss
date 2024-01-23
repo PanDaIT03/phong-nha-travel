@@ -1,0 +1,76 @@
+.content {
+  display: flex;
+  gap: 2.4rem;
+  width: 114rem;
+  margin: 0 auto;
+
+  .profile-pic {
+    width: 34.6rem;
+    height: max-content;
+  }
+
+  .account-details {
+    width: 71.8rem;
+  }
+}
+
+.profile-pic,
+.account-details {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
+  border: 0.1rem solid rgba(0, 0, 0, 0.125);
+
+  .header {
+    width: 100%;
+    height: 5.7rem;
+    color: #69707a;
+    padding: 1.6rem 2.16rem;
+    background-color: rgba(33, 40, 50, 0.03);
+    border-bottom: 0.1rem solid rgba(33, 40, 50, 0.125);
+
+    .title {
+      font-size: 1.6rem;
+      font-weight: 500;
+    }
+  }
+}
+
+.content-avatar {
+  width: 100%;
+  height: 28.3rem;
+  background-color: var(--color-white);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  .avatar {
+    width: 16rem;
+    height: 16rem;
+    margin-bottom: 0.8rem;
+  }
+
+  .description {
+    color: #6c757d;
+  }
+}
+
+.user-info {
+  width: 100%;
+  padding: 1.6rem;
+
+  .row {
+    display: flex;
+    gap: 1.6rem;
+
+    div {
+        margin: 0;
+    }
+  }
+
+  .save {
+    margin-top: 2rem;
+  }
+}

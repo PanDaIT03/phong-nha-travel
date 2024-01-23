@@ -14,7 +14,7 @@ import Context from '~/Component/Context/context';
 import style from '~/Component/PageStyle/CartStyle/CartStyle.module.scss';
 const cx = classNames.bind(style);
 
-function Cart() {
+function CartPage() {
     const context = useContext(Context);
     const { message, setMessage } = context;
 
@@ -182,4 +182,4 @@ function Cart() {
     );
 }
 
-export default Cart;
+export default CartPage;

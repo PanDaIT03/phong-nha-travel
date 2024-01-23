@@ -4,11 +4,11 @@ import { useSelector } from "react-redux";
 
 import * as getServices from "~/apiServices/getServices";
 import TourCategoryItem from "~/Component/TourCategoryItem";
-import style from "~/Component/PageStyle/TourCategory/TourCategory.module.scss";
 
+import style from "~/Component/PageStyle/TourCategory/TourCategory.module.scss";
 const cx = classNames.bind(style);
 
-function TourCategory() {
+function TourCategoryPage() {
     const searchData = useSelector(state => state.search.list);
     const [tours, setTours] = useState([]);
 
@@ -44,4 +44,4 @@ function TourCategory() {
     );
 }
 
-export default TourCategory;
+export default TourCategoryPage;

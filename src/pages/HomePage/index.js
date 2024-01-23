@@ -1,24 +1,21 @@
-import classNames from 'classnames/bind';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowRightLong, faStar } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import classNames from 'classnames/bind';
 
-import globalImage from '~/asset/images';
-import Slider from '~/Component/Slider';
-import { images } from '~/Component/Slider/images';
-import TourElement from '~/Component/TourElement';
-import FindATour from '~/Component/FindATour';
-import Contract from '~/Component/Contract';
-import ChooseDifference from '~/Component/ChooseDifference';
-import GridTour from '~/Component/GridTour';
+import BackToTop from '~/Component/BackToTop';
 import Button from '~/Component/Button';
 import CardUser from '~/Component/CardUser';
+import Contract from '~/Component/Contract';
 import FeedBack from '~/Component/FeedBack';
-import BackToTop from '~/Component/BackToTop';
+import FindATour from '~/Component/FindATour';
+import Slider from '~/Component/Slider';
+import { images } from '~/Component/Slider/images';
+import globalImage from '~/asset/images';
 
 import style from '~/Component/PageStyle/HomeStyle/HomeStyle.module.scss';
 const cx = classNames.bind(style);
 
-function Home() {
+function HomePage() {
     const rated = [
         {
             name: "Phúc Đại",
@@ -51,7 +48,7 @@ function Home() {
         <div className={cx('wrapper')}>
             <Slider images={images} />
 
-            <GridTour
+            {/* <GridTour
                 title="Có thể bạn sẽ thích những TOUR du lịch dưới đây"
                 description="tour quảng bình nổi bật"
                 primary
@@ -73,7 +70,7 @@ function Home() {
                 description="Những tour du lịch hằng ngày trên Phong Nha Travel"
             >
                 <TourElement topicID={3} key={3} />
-            </GridTour>
+            </GridTour> */}
 
             <div className={cx('swipper-wrapper')}>
                 <FindATour />
@@ -164,4 +161,4 @@ function Home() {
     );
 }
 
-export default Home;
+export default HomePage;

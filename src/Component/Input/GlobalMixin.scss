@@ -1,0 +1,72 @@
+@mixin setPosition($position, $top, $right, $bottom, $left, $middleVertical) {
+  position: $position;
+
+  @if $top !=0 {
+    top: $top;
+  }
+
+  @if $right !=0 {
+    right: $right;
+  }
+
+  @if $bottom !=0 {
+    bottom: $bottom;
+  }
+
+  @if $left !=0 {
+    left: $left;
+  }
+
+  @if ($middleVertical != false) {
+    transform: translateY(-50%);
+  } @else if($middleVertical == false) {
+    transform: none;
+  }
+}
+
+%button {
+  display: flex;
+  justify-content: space-between;
+  width: max-content;
+  cursor: pointer;
+  padding: 1.5rem 2rem;
+  opacity: 1;
+  font-weight: 700;
+  background-color: var(--primary);
+  color: white;
+  border: 0.3rem solid #47a0ff;
+  border-radius: 5rem;
+  transition: 0.25s ease-in-out;
+
+  &:hover {
+    background-color: var(--white);
+    color: var(--primary);
+    border: 0.3rem solid var(--primary);
+  }
+}
+
+%title-h3 {
+  color: #2980b9;
+  font-weight: 900;
+  font-size: 2rem;
+  text-align: center;
+  padding: 0 1rem;
+}
+
+%colorInstagram {
+  display: inline-block;
+  text-align: center;
+  border-radius: 40px;
+  color: #fff;
+  vertical-align: middle;
+  background: #d6249f;
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+}

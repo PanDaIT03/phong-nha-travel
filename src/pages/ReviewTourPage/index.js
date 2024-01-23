@@ -1,20 +1,18 @@
-import React, { useContext } from "react";
-import { useParams } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { faFacebookF, faInstagram, faPinterest, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classNames from "classnames/bind";
+import { useContext, useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
-import FormSearch from "~/Component/FormBookTour";
 import Context from "~/Component/Context/context";
+import FormSearch from "~/Component/FormBookTour";
 import * as getServices from "~/apiServices/getServices";
-import { formatter } from "~/constants/constants";
-import { modifyTourName } from "~/constants/constants";
+import { formatter, modifyTourName } from "~/constants/constants";
 
 import style from "~/Component/PageStyle/ReviewTourStyle/ReviewTourStyle.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faFacebookF, faInstagram, faPinterest, faTwitter } from "@fortawesome/free-brands-svg-icons";
 const cx = classNames.bind(style);
 
-function ReviewTour() {
+function ReviewTourPage() {
     const context = useContext(Context);
     const params = useParams();
 
@@ -204,4 +202,4 @@ function ReviewTour() {
     );
 }
 
-export default ReviewTour;
+export default ReviewTourPage;

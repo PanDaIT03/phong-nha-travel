@@ -3,8 +3,8 @@ import { publicRoutes } from '~/routes'
 import { DefaultLayout } from '~/Layout';
 import { Fragment } from 'react';
 
-import Cart from './pages/Cart';
-import ReviewTour from './pages/ReviewTour';
+import Cart from './pages/CartPage';
+import ReviewTour from './pages/ReviewTourPage';
 import CheckOutPage from './pages/CheckOutPage';
 import FormSearch from './Component/FormSearch';
 import { Provider } from './Component/Context/context';
