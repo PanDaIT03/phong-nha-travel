@@ -332,7 +332,7 @@ const HAND_BOOK = [
         datePublished: "23/09/2020",
         user: "Dương Đại",
         type: "Cẩm Nang",
-        thumbnail: images.tuLanLodge,
+        thumbnail: images.conDuongDaLatQB,
         articleSection: "co nen du lich quang binh vao mua dong, Lý do khách Sài gòn du lịch Quảng Bình vào mùa đông",
         description: "TÚ LÀN LODGE – TRẢI NGHIỆM LƯU TRÚ ĐỘC ĐÁO BÊN TRIỀN NÚI TÂN HOÁ Vị trí lý tưởng, độc đáo Là khu lưu trú có địa thế độc đáo, Tu Lan Lodge toạ lạc ngay lưng chừng triền núi, có thiết kế chắc chắn và cao ráo để thích nghi với điều kiện thời"
     }
@@ -387,6 +387,7 @@ export {
     CATEGORY_ITEMS,
     TABLE_RENTAL_PRICE,
     COMMIT_LIST,
+    HAND_BOOK,
     today,
     modifyTourName,
 };

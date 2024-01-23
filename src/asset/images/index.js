@@ -12,6 +12,7 @@ const images = {
     osen: require('./Bang_Osen_Quang_Binh.jpeg'),
     banhXeoBaDon: require('./Banh_Xeo_Ba_Don.jpeg'),
     tuLanLodge: require('./Tu_Lan_Lodge.jpeg'),
+    conDuongDaLatQB: require('./con_duong_da_lat_quang_binh.jpeg'),
 };
 
 export default images;
