@@ -20,7 +20,7 @@ function HandBookPage() {
                     <div className={cx("title-primary")}><h2>Cẩm nang</h2></div>
                     <div className={cx("description-primary")}>Tin tức mới nhất Phong Nha Travel</div>
                 </div>
-                
+                <div >a</div>
             </div>
         </div>
     );
